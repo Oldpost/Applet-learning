@@ -1,0 +1,7 @@
+<!-- page1.wxml -->
+<view class='container'>
+  我是页面C
+  <button bindtap='clickToPageD'>进入D页面</button>
+  <button bindtap='clickBackToA'>返回A</button>
+  <button bindtap='clickBackToB'>返回B</button>
+</view>

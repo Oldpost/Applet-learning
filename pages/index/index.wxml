@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view hidden="{{flag ? true : false}}">
+    {{'Hello '+name}},{{a+b}}+{{c}}={{a+b+c}}.
+    <text wx:for="{{['We have',a,b,c]}}" wx:for-item="item">{{item}} </text>
+  </view>
+  <view wx:for="{{[1,2,3]}} ">
+  {{item}}
+</view>
+  <view class="usermotto">
+    <text class="user-motto" >{{motto}}</text>
+    <button bindtap='clickToPageC'>重定向C页面</button>
+    <button bindtap='navigateToC'>打开C</button>
+    <button open-type='share'>分享</button>
+    <button bindtap='showFlag'>{{flag?'show':'hiddent'}}</button>
+  </view>
+</view>
