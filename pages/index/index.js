@@ -16,7 +16,8 @@ Page({
     name:'Silvia'
   },
   // 隐藏/显示
-  showFlag(){
+  showFlag(event){
+    console.log(event)
     this.setData({
       flag:!this.data.flag
     });
@@ -46,6 +47,8 @@ Page({
     });
   },
   onLoad: function () {
+    var a = 10, b = 20;
+    console.log((a && b));
     console.log(common);
     common.sayHello('Silvia');
     common.sayGoodbye('Silvia');

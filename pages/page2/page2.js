@@ -5,14 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    array: [1, 2, 3, 4, 5, 1, 2, 3, 4]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('页面D触发onLoad', options)
+    console.log('页面D触发onLoad', options);
+    
   },
   // 重定向C
   redirectToC:function(){
@@ -48,6 +49,12 @@ Page({
   reLaunchA:function(){
     wx.reLaunch({
       url: '../index/index',
+    })
+  },
+  // 打开navigateToWXS
+  navigateToWXS(){
+    wx.reLaunch({
+      url: '../wxsTest/wxsTest',
     })
   },
   /**

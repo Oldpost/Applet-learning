@@ -1,7 +1,11 @@
+
 <view class='container'>
 我是页面D
+<wxs src="./wxsTest.wxs" module="m1" />
+<view>{{m1.getMax(array)}}</view>
 <button bindtap='redirectToC'>重定向C</button>
 <button bindtap='navigateToC'>打开C</button>
+<button bindtap='navigateToWXS'>打开WXS</button>
 <button bindtap='navigateBackToC'>返回C</button>
 <button bindtap='reLaunchA'>重载A</button>
 <button bindtap='clickBackToA'>返回A</button>

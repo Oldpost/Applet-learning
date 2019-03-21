@@ -8,7 +8,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    item: {
+      index: 0,
+      msg: 'this is a template',
+      time: '2016-09-15'
+    }
+  },
+  handleTap1(e){
+    console.log('handleTap1',e)
+  },
+  handleTap2(e) {
+    console.log('handleTap2', e)
+  },
+  handleTap3(e) {
+    console.log('handleTap3', e)
+  },
+  handleTap4(e) {
+    console.log('handleTap4', e)
+  },
+  handleTap5(e) {
+    console.log('handleTap5', e)
+  },
+  handleTap6(e) {
+    console.log('handleTap6', e)
   },
   // 新增数据相应绑定
   clickToPageD: function () {

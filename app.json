@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/page1/page1",
     "pages/page2/page2",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/wxsTest/wxsTest"
   ],
   "window":{
     "backgroundTextStyle":"dark",

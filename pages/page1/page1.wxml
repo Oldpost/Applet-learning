@@ -1,7 +1,35 @@
 <!-- page1.wxml -->
 <view class='container'>
-  我是页面C
+  <template name="msgItem">
+    <view>
+      <text>{{index}}: {{msg}}</text>
+      <text>Time: {{time}}</text>
+    </view>
+  </template>
+  <template is="msgItem" data="{{...item}}" />
   <button bindtap='clickToPageD'>进入D页面</button>
   <button bindtap='clickBackToA'>返回A</button>
   <button bindtap='clickBackToB'>返回B</button>
+  <view
+    id="outer"
+    bind:touchstart="handleTap1"
+    capture-bind:touchstart="handleTap2"
+  >
+    outer view
+    <view
+      id="inner"
+      bind:touchstart="handleTap3"
+      capture-catch:touchstart="handleTap4"
+    >
+      inner view
+      <view
+      id="innerAgain"
+      bind:touchstart="handleTap5"
+      capture-bind:touchstart="handleTap6"
+    >
+      inner view too
+      
+    </view>
+    </view>
+  </view>
 </view>
